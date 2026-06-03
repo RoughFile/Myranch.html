@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+/* General styles */
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+    background-image: url('240565_Aurora 3.jpg');
+
+    background-color: #f8f9fa;
+
+    color: #333;
+
+}
+
+header {
+
+    background-color: #007bff;
+
+    color: white;
+
+    padding: 1em 0;
+
+    text-align: center;
+
+}
+
+nav ul {
+
+    list-style: none;
+
+    padding: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    margin: 0;
+
+}
+
+nav ul li {
+
+    margin: 0 1em;
+
+}
+
+nav ul li a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: bold;
+
+}
+
+main {
+
+    padding: 2em;
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+}
+
+footer {
+
+    background-color: #333;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 1em 0;
+
+}
+
+/* Home styles */
+
+#home {
+
+    margin-bottom: 2em;
+
+}
+
+/* Products styles */
+
+#products {
+
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 1em;
+
+}
+
+.product {
+
+    border: 1px solid #ccc;
+
+    padding: 1em;
+
+    background-color: white;
+
+    text-align: center;
+
+}
+
+.product h3 {
+
+    margin-top: 0;
+
+    font-size: 1.2em;
+
+}
+
+.product p {
+
+    font-size: 1.1em;
+
+    color: #007bff;
+
+    margin: 0.5em 0;
+
+}
+
+button {
+
+    background-color: #28a745;
+
+    color: white;
+
+    border: none;
+
+    padding: 0.5em 1em;
+
+    cursor: pointer;
+
+    font-size: 1em;
+
+}
+
+button:hover {
+
+    background-color: #218838;
+
+}
+
+/* Contact styles */
+
+form {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1em;
+
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    padding: 1em;
+
+    border: 1px solid #ccc;
+
+    background-color: white;
+
+    border-radius: 8px;
+
+}
+
+label {
+
+    font-weight: bold;
+
+    margin-bottom: 0.5em;
+
+}
+
+input, textarea {
+
+    padding: 0.5em;
+
+    border: 1px solid #ccc;
+
+    border-radius: 4px;
+
+}
+
+textarea {
+
+    height: 150px;
+
+}
+
+/* Registration, Login, and Profile styles */
+
+#register, #login, #profile {
+
+     nav ul {
+
+        flex-direction: column;
+
+    }
+
+    #products {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .product {
+
+        margin-bottom: 1em;
+
+    }
+
+}
+</style>
+  <meta charset="UTF-8">
+  <title>Biz scroll</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+
+
+
+
+
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Business</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+
+
+
+
+    <header>
+
+        <h1>Welcome to My Store</h1>
+
+        <nav>
+
+            <ul>
+
+                <li><a href="#home">Home</a></li>
+
+                <li><a href="#products">Products</a></li>
+
+                <li><a href="#contact">Contact</a></li>
+
+                <li><a href="#register">Register</a></li>
+
+                <li><a href="#login">Login</a></li>
+
+                <li><a href="#profile">Profile</a></li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <main>
+
+        <!-- Home Section -->
+
+        <section id="home">
+
+            <h2>Welcome to Our Store</h2>
+
+            <p>Explore our wide range of products designed to meet all your needs.</p>
+
+        </section>
+
+        <!-- Products Section -->
+
+        <section id="products">
+
+            <h2>Products</h2>
+
+            <div class="product" id="product1">
+
+                <h3>Product 1</h3>
+
+                <p>$10.00</p>
+
+                <button onclick="addToCart('Product 1', 10.00)">Add to Cart</button>
+
+            </div>
+
+            <!-- Add more products here -->
+
+            <div class="product" id="product2">
+
+                <h3>Product 2</h3>
+
+                <p>$20.00</p>
+
+                <button onclick="addToCart('Product 2', 20.00)">Add to Cart</button>
+
+            </div>
+
+            <div class="product" id="product3">
+
+                <h3>Product 3</h3>
+
+                <p>$15.00</p>
+
+                <button onclick="addToCart('Product 3', 15.00)">Add to Cart</button>
+
+            </div>
+
+            <div class="product" id="product4">
+
+                <h3>Product 4</h3>
+
+                <p>$12.00</p>
+
+                <button onclick="addToCart('Product 4', 12.00)">Add to Cart</button>
+
+            </div>
+
+            <div class="product" id="product5">
+
+                <h3>Product 5</h3>
+
+                <p>$25.00</p>
+
+                <button onclick="addToCart('Product 5', 25.00)">Add to Cart</button>
+
+            </div>
+
+            <div class="product" id="product6">
+
+                <h3>Product 6</h3>
+
+                <p>$18.00</p>
+
+                <button onclick="addToCart('Product 6', 18.00)">Add to Cart</button>
+
+            </div>
+
+            <div class="product" id="product7">
+
+                <h3>Product 7</h3>
+
+                <p>$22.00</p>
+
+                <button onclick="addToCart('Product 7', 22.00)">Add to Cart</button>
+
+            </div>
+
+            <div class="product" id="product8">
+
+                <h3>Product 8</h3>
+
+                <p>$30.00</p>
+
+                <button onclick="addToCart('Product 8', 30.00)">Add to Cart</button>
+
+            </div>
+
+            <div class="product" id="product9">
+
+                <h3>Product 9</h3>
+
+                <p>$11.00</p>
+
+                <button onclick="addToCart('Product 9', 11.00)">Add to Cart</button>
+
+            </div>
+
+            <div class="product" id="product10">
+
+                <h3>Product 10</h3>
+
+                <p>$19.00</p>
+
+                <button onclick="addToCart('Product 10', 19.00)">Add to Cart</button>
+
+            </div>
+
+        </section>
+
+        <section id="cart">
+
+            <h2>Shopping Cart</h2>
+
+            <ul id="cartItems"></ul>
+
+            <p>Total: $<span id="totalAmount">0.00</span></p>
+
+        </section>
+
+        <!-- Contact Section -->
+
+        <section id="contact">
+
+            <h2>Contact Us</h2>
+
+            <form>
+
+                <label for="name">Name:</label>
+
+                <input type="text" id="name" name="name" required="">
+
+                <label for="email">Email:</label>
+
+                <input type="email" id="email" name="email" required="">
+
+                <label for="message">Message:</label>
+
+                <textarea id="message" name="message" required=""></textarea>
+
+                <button type="submit">Send Message</button>
+
+            </form>
+
+        </section>
+
+        <!-- Registration Section -->
+
+        <section id="register">
+
+            <h2>Create an Account</h2>
+
+            <form id="registrationForm">
+
+                <label for="username">Username:</label>
+
+                <input type="text" id="username" name="username" required="">
+
+                <label for="email">Email:</label>
+
+                <input type="email" id="email" name="email" required="">
+
+                <label for="password">Password:</label>
+
+                <input type="password" id="password" name="password" required="">
+
+                <button type="submit">Register</button>
+
+            </form>
+
+        </section>
+
+        <!-- Login Section -->
+
+        <section id="login">
+
+            <h2>Login</h2>
+
+            <form id="loginForm">
+
+                <label for="username">Username:</label>
+
+                <input type="text" id="username" name="username" required="">
+
+                <label for="password">Password:</label>
+
+                <input type="password" id="password" name="password" required="">
+
+                <button type="submit">Login</button>
+
+            </form>
+
+        </section>
+
+        <!-- Profile Section -->
+
+        <section id="profile">
+
+            <h2>Welcome, <span id="profileUsername"></span>!</h2>
+
+            <p>Email: <span id="profileEmail"></span></p>
+
+            <p>Order History: (This section will be implemented with backend support)</p>
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>© 2024 My Business</p>
+
+    </footer>
+
+    <script src="scripts.js"></script>
+
+
+
+
+
+  <script src="./script.js"></script>
+
+
+
+</body></html>
